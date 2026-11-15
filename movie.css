@@ -1,0 +1,424 @@
+a{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8ed;
+    color: #243b30;
+}
+
+/* HEADER */
+
+header {
+    background: #173d32;
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+header span {
+    color: #f7c95b;
+    font-size: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #f7c95b;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 470px;
+    background:
+        linear-gradient(90deg, #102d25 5%, #102d25bb 40%, transparent 100%),
+        url("https://lumiere-a.akamaihd.net/v1/images/pp_movies_zootopia2_herobanner_v2_e03b44aa.jpeg?region=0%2C0%2C2048%2C878&width=1536");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+}
+
+.hero-content {
+    max-width: 450px;
+    color: white;
+}
+
+.small-title {
+    color: #f7c95b;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.hero-content h1 {
+    font-size: 65px;
+    margin: 20px 0;
+    color: #f7c95b;
+    text-shadow: 2px 3px 5px #000;
+}
+
+.hero-content h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    line-height: 1.7;
+}
+
+.book-btn {
+    display: inline-block;
+    margin-top: 25px;
+    background: #f5bd43;
+    color: #173d32;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.book-btn:hover {
+    background: white;
+}
+
+/* MOVIE DETAILS */
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 65px 10%;
+}
+
+.movie-image {
+    width: 48%;
+}
+
+.movie-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px #0003;
+}
+
+.movie-info {
+    flex: 1;
+}
+
+.movie-info h2 {
+    font-size: 35px;
+    color: #173d32;
+    margin-bottom: 15px;
+}
+
+.movie-info p {
+    margin: 12px 0;
+    color: #56695d;
+}
+
+.movie-info .rating {
+    color: #d99d22;
+    font-weight: bold;
+}
+
+.description {
+    line-height: 1.8;
+}
+
+/* CHARACTERS */
+
+.characters {
+    background: #e7efdc;
+    padding: 55px 10%;
+    text-align: center;
+}
+
+.characters h2 {
+    margin-bottom: 30px;
+    color: #173d32;
+}
+
+.character-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.character {
+    width: 300px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 5px 15px #0002;
+}
+
+.character img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.character h3 {
+    margin: 15px 0 8px;
+}
+
+.character p {
+    color: #78877c;
+}
+
+/* SHOWTIME */
+
+.showtime {
+    padding: 55px 10%;
+    text-align: center;
+    background: #173d32;
+    color: white;
+}
+
+.timings {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.timings input {
+    display: none;
+}
+
+.timings span {
+    display: block;
+    padding: 15px 25px;
+    border: 1px solid #f7c95b;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+}
+
+.timings input:checked + span {
+    background: #f7c95b;
+    color: #173d32;
+}
+
+/* SEATS */
+
+.seats-section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.seats-section h2 {
+    color: #173d32;
+}
+
+.seat-description {
+    margin-top: 12px;
+    color: #718076;
+}
+
+.screen {
+    width: 65%;
+    margin: 45px auto;
+    padding: 18px;
+    background: #d9e1d2;
+    color: #173d32;
+    transform: perspective(150px) rotateX(-5deg);
+    box-shadow: 0 10px 20px #789b7855;
+    letter-spacing: 4px;
+}
+
+.seat-info {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 35px;
+    font-size: 14px;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 15px;
+}
+
+.seat-row p {
+    font-weight: bold;
+    color: #173d32;
+    width: 20px;
+}
+
+.seat-row input {
+    display: none;
+}
+
+.seat-row span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 40px;
+    background: #b6d5ad;
+    border-radius: 8px 8px 3px 3px;
+    border: 1px solid #82a77a;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.seat-row input:checked + span {
+    background: #f5bd43;
+    border-color: #d99d22;
+}
+
+.seat-row input:disabled + span {
+    background: #c5c5c5;
+    color: #777;
+    cursor: not-allowed;
+}
+
+/* BOOKING */
+
+.booking {
+    max-width: 550px;
+    margin: 55px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #0002;
+    text-align: left;
+}
+
+.booking h2 {
+    margin-bottom: 20px;
+    color: #173d32;
+}
+
+.booking-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.booking-details p {
+    color: #718076;
+}
+
+.booking h3 {
+    margin-top: 25px;
+    color: #173d32;
+}
+
+.booking button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 16px;
+    background: #173d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.booking button:hover {
+    background: #28634c;
+}
+
+/* FOOTER */
+
+footer {
+    background: #173d32;
+    color: white;
+    padding: 35px;
+    text-align: center;
+}
+
+footer h2 {
+    color: #f7c95b;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px;
+    color: #cbd8cc;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 750px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 8px;
+    }
+
+    .hero {
+        background-position: center;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .details {
+        flex-direction: column;
+    }
+
+    .movie-image {
+        width: 100%;
+    }
+
+    .character-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .character {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .seat-row {
+        gap: 5px;
+    }
+
+    .seat-row span {
+        width: 35px;
+        height: 32px;
+        font-size: 9px;
+    }
+
+    .seat-info {
+        font-size: 11px;
+        gap: 10px;
+    }
+}

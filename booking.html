@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Ticket Booking</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="back" onclick="history.back()">&#8249;</div>
+
+        <div class="movie-info">
+            <h2>Ramayana (3D) (Hindi) - Hindi</h2>
+            <p>Palaxi Cinemas HiLITE MALL:Kozhikode </p>
+            <p>Monday, 16 November 2026 | 10:00 Am</p>
+        </div>
+
+        <div class="ticket-count" id="ticketCount">
+            0 Tickets
+        </div>
+
+    </header>
+
+    <div class="timings">
+
+        <button class="time">09:15 PM</button>
+        <button class="time">10:15 PM</button>
+        <button class="time active">10:45 PM</button>
+        <button class="time">11:45 PM</button>
+
+    </div>
+
+    <div class="seat-area" id="seatArea">
+
+        <div class="screen">
+            <p>MOVIE SCREEN</p>
+            <div class="screen-line"></div>
+        </div>
+
+        <div class="category">
+
+            <h3>₹1280 RECLINER</h3>
+
+            <div class="category-line"></div>
+
+            <div id="recliner"></div>
+
+        </div>
+
+        <div class="category">
+
+            <h3>₹640 PREMIUM</h3>
+
+            <div class="category-line"></div>
+
+            <div id="premium"></div>
+
+        </div>
+
+        <div class="category">
+
+            <h3>₹620 EXECUTIVE</h3>
+
+            <div class="category-line"></div>
+
+            <div id="executive"></div>
+
+        </div>
+
+    </div>
+
+    <div class="zoom">
+
+        <button onclick="zoomIn()">+</button>
+        <button onclick="zoomOut()">−</button>
+
+    </div>
+
+    <div class="bottom-section">
+
+        <div class="legend">
+
+            <div class="legend-item">
+                <div class="legend-box"></div>
+                Available
+            </div>
+
+            <div class="legend-item">
+                <div class="legend-box legend-sold"></div>
+                Sold
+            </div>
+
+            <div class="legend-item">
+                <div class="legend-box legend-best"></div>
+                Bestseller
+            </div>
+
+            <div class="legend-item">
+                <div class="legend-box legend-selected"></div>
+                Selected
+            </div>
+
+        </div>
+
+        <div class="payment">
+
+            <div class="offer">
+                <span class="offer-icon">✔</span>
+                <span>YES Private Debit Card Offer</span>
+            </div>
+
+            <button class="booking-btn" id="bookBtn"
+                onclick="bookTickets()" disabled>
+                Select Seats
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+a{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f3f5f9;
+    color: #333;
+}
+
+/* HEADER */
+
+header {
+    background-color: white;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.back {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.movie-info {
+    flex: 1;
+}
+
+.movie-info h2 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.movie-info p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.ticket-count {
+    border: 1px solid #ff4055;
+    color: #ff4055;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.timings {
+    background-color: #f0f3f8;
+    padding: 15px 40px;
+    display: flex;
+    gap: 12px;
+    box-shadow: 0 3px 5px #ccc;
+    overflow-x: auto;
+}
+
+.time {
+    padding: 14px 25px;
+    background-color: white;
+    border: 1px solid orange;
+    border-left: 5px solid orange;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.time.active {
+    background-color: #efa900;
+    color: white;
+    font-weight: bold;
+}
+
+.time:last-child {
+    border-color: #22b34a;
+}
+
+.seat-area {
+    background-color: white;
+    min-height: 650px;
+    padding: 25px 35px 150px;
+    overflow: auto;
+}
+
+.screen {
+    text-align: center;
+    margin: 10px auto 35px;
+    max-width: 1100px;
+    font-size: 19px;
+    color: #555;
+}
+
+.screen-line {
+    height: 3px;
+    background: #e6e6e6;
+    margin-top: 20px;
+}
+
+.category {
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 35px;
+}
+
+.category h3 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.category-line {
+    height: 2px;
+    background: #e5e5e5;
+    margin-bottom: 12px;
+}
+
+.seat-row {
+    display: grid;
+    grid-template-columns: 25px repeat(18, 38px);
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    min-width: 850px;
+}
+
+.row-name {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.seat {
+    width: 38px;
+    height: 38px;
+    border: 2px solid #62ca7c;
+    background-color: white;
+    color: #555;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.seat.sold {
+    background-color: #e5e5e5;
+    border: 1px solid #e5e5e5;
+    color: white;
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background-color: #20ad48;
+    border: 2px solid #20ad48;
+    color: white;
+}
+
+.seat.bestseller {
+    border: 2px solid #ffb400;
+}
+
+.seat:not(.sold):hover {
+    background-color: #d6f4df;
+}
+
+.seat.selected:hover {
+    background-color: #20ad48;
+}
+
+.seat:nth-child(5),
+.seat:nth-child(12),
+.seat:nth-child(17) {
+    margin-left: 15px;
+}
+
+.zoom {
+    position: fixed;
+    right: 25px;
+    bottom: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 5;
+}
+
+.zoom button {
+    width: 38px;
+    height: 38px;
+    border: none;
+    background: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.bottom-section {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 -3px 12px #ddd;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.legend-box {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #62ca7c;
+}
+
+.legend-sold {
+    background-color: #e5e5e5;
+    border: none;
+}
+
+.legend-best {
+    border: 3px solid #ffb400;
+    border-radius: 4px;
+}
+
+.legend-selected {
+    background-color: #20ad48;
+    border: none;
+}
+
+.payment {
+    background-color: #f0f3f8;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.offer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.offer-icon {
+    font-size: 25px;
+    color: #ff3150;
+}
+
+.booking-btn {
+    padding: 12px 25px;
+    background-color: #e91e4d;
+    border: none;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.booking-btn:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+@media(max-width: 700px) {
+
+    header {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .movie-info h2 {
+        font-size: 15px;
+    }
+
+    .movie-info p {
+        font-size: 11px;
+    }
+
+    .ticket-count {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .timings {
+        padding: 12px;
+    }
+
+    .seat-area {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .payment {
+        padding: 12px;
+    }
+
+}
